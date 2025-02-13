@@ -9,7 +9,7 @@ require('dotenv').config();
 
 const app = express();
 app.use(cors({
-    origin: 'http://localhost:5173' // Allow only this frontend origin
+    origin: 'origin: process.env.FRONTEND_URL' // Allow only this frontend origin
 }));
 // MongoDB connection
 mongoose.connect(process.env.DATA_BASE_URL, {
